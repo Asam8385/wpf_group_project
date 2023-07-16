@@ -1,5 +1,5 @@
 # wpf_group_project
-#admin 
+# admin 
 username = admin
 password = 3833
 
