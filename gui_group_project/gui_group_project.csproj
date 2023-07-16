@@ -1,0 +1,101 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\backround2.jpg" />
+    <None Remove="Images\doll.png" />
+    <None Remove="image_03\BOOKS.png" />
+    <None Remove="image_03\DESKTOP.png" />
+    <None Remove="image_03\HEADPHONE.png" />
+    <None Remove="image_03\LAPTOP.png" />
+    <None Remove="image_03\PHONE.png" />
+  </ItemGroup>
+
+
+
+
+
+
+  <ItemGroup>
+    <Resource Include="Images\back01.jpg" />
+    <Resource Include="Images\back02.jpg" />
+    <Resource Include="Images\backround2.jpg" />
+    <Resource Include="Images\doll.png" />
+    <Resource Include="Images\doller.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="FluentAssertions" Version="6.11.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\back-image.jpg" />
+    <Resource Include="Images\close_icon.png" />
+    <Resource Include="Images\home_icon.png" />
+    <Resource Include="Images\key-icon.png" />
+    <Resource Include="Images\login.jpg" />
+    <Resource Include="Images\Picture1.png" />
+    <Resource Include="Images\profile_icon.png" />
+    <Resource Include="Images\user-icon.png" />
+    <Resource Include="Images\window.jpg" />
+    <Resource Include="Images_02\1.png" />
+    <Resource Include="Images_02\pic.png" />
+    <Resource Include="Images_02\2.png" />
+    <Resource Include="Images_02\3.png" />
+    <Resource Include="Images_02\4.png" />
+    <Resource Include="Images_02\5.png" />
+    <Resource Include="Images_02\6.png" />
+    <Resource Include="Images_02\7.png" />
+    <Resource Include="Images_02\8.png" />
+    <Resource Include="Images_02\9.png" />
+    <Resource Include="image_03\4578246.png" />
+    <Resource Include="image_03\BOOKS.png" />
+    <Resource Include="image_03\DESKTOP.png" />
+    <Resource Include="image_03\HEADPHONE.png" />
+    <Resource Include="image_03\LAPTOP.png" />
+    <Resource Include="image_03\PHONE.png" />
+    <Resource Include="ViewModel\ViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="View\Admin_pages\AdminUserC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Admin_pages\AdminUserR.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Admin_pages\AdminUserU.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="View\Admin_pages\AdminUserU.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

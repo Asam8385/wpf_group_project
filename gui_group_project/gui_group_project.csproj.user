@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\ASAM\Downloads\Thursday%28DAY03%29\Thursday%28DAY03%29\gui_group_project\gui_group_project\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\admintest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Admin_pages\AdminUserD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Admin_sign.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Admin_userwindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\NormaluserAWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\NorUser_sign.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User_pages\buy_menu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User_pages\Cart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User_pages\userC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User_pages\UserD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User_pages\UserR.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User_pages\UserU.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\admintest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Admin_pages\AdminUserC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Admin_pages\AdminUserR.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Admin_pages\AdminUserU.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Admin_pages\AdminUserD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Admin_sign.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Admin_userwindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\NormaluserAWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\NorUser_sign.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User_pages\buy_menu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User_pages\Cart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User_pages\UserC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User_pages\UserD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User_pages\UserR.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User_pages\UserU.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

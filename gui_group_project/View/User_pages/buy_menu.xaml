@@ -1,0 +1,126 @@
+﻿<Window x:Class="gui_group_project.View.User_pages.buy_menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gui_group_project.View.User_pages"
+        xmlns:viewmodal ="clr-namespace:gui_group_project"
+        mc:Ignorable="d"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="buy_menu" Height="450" Width="800">
+    <Window.DataContext>
+        <viewmodal:ViewModel/>
+    </Window.DataContext>
+
+    <Border  CornerRadius="10">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#D3D3D3" Offset="0"/>
+                <GradientStop Color="#FF196176" Offset="1"/>
+                <GradientStop Color="#D3D3D3" Offset="0.245"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border CornerRadius="10 0 0 10" Margin="-2,0,2,0">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#D3D3D3" Offset="0"/>
+                        <GradientStop Color="#FF196176" Offset="1"/>
+                        <GradientStop Color="#D3D3D3" Offset="0.245"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Button 
+                    x:Name="backbt_Copy"                          
+                    
+                    Content="Cancel Payment"
+                    Foreground="White"
+                    Click="backbt_Copy_Click"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                   Style= "{StaticResource mainbtn}"
+                    Margin="86,382,101,8"        >
+
+
+                </Button>
+
+            </Border>
+            <StackPanel Grid.Column="1" Margin="20">
+                <TextBlock VerticalAlignment="Center" Text="Payment" FontSize="45" HorizontalAlignment="Left" FontFamily="Cascadia Code"/>
+                <Border Margin="0 50 0 0" Width="257" Height="162" CornerRadius="5">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2E2E2E" Offset="0"/>
+                            <GradientStop Color="#FF3E3D3D" Offset="1"/>
+                            <GradientStop Color="#FF3E3E3E" Offset="0.43"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <Border CornerRadius="5" Height="20" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Background="#FF474747"/>
+                        <Grid Width="200" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="{Binding ElementName=A,UpdateSourceTrigger=PropertyChanged,Path=Text}" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                            <TextBlock Grid.Column="1" Text="{Binding ElementName=B,UpdateSourceTrigger=PropertyChanged, Path=Text}" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                            <TextBlock Grid.Column="2" Text="{Binding ElementName=C,UpdateSourceTrigger=PropertyChanged, Path=Text}" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                            <TextBlock Grid.Column="3" Text="{Binding ElementName=D,UpdateSourceTrigger=PropertyChanged, Path=Text}" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                        </Grid>
+                        <Grid VerticalAlignment="Bottom">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Margin="20" Grid.Column="0">
+                                <TextBlock Text="CARD HOLDER" FontSize="7" Foreground="LightGray"/>
+                                <TextBlock Text="{Binding Username}" FontSize="12" Foreground="LightGray" FontFamily="OCR A Extended" />
+                            </StackPanel>
+                            <StackPanel Margin="20" Grid.Column="1">
+                                <TextBlock Text="EXPIRES" FontSize="7" Foreground="LightGray"/>
+                                <TextBlock Text="{Binding ElementName=E,Path=Text}" FontSize="12" Foreground="LightGray" FontFamily="OCR A Extended" />
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <TextBlock Text="Total Bill" FontSize="45" HorizontalAlignment="Center" Width="181"/>
+                <TextBlock Name="total" TextAlignment="Center" Text="{Binding Tota,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" FontSize="45" HorizontalAlignment="Center" Width="181"/>
+
+            </StackPanel>
+            <TextBlock Text="Fill credit card to begin" Foreground="White"
+                       FontSize="20" Margin="38,39,60,368" FontFamily="Kristen ITC"/>
+            <TextBlock Text="Enter the card details" Foreground="White" Margin="22,121,189,285"/>
+            <TextBox x:Name="B" Text="{Binding A}"  HorizontalAlignment="Left" Foreground="White" FontFamily="Global Monospace" Margin="92,170,0,250" BorderBrush="Yellow"     BorderThickness=" 0 0 0 3" Background="Transparent" Width="51"/>
+            <TextBox x:Name="D" Text="{Binding B}"  HorizontalAlignment="Left" Foreground="White" FontFamily="Global Monospace" Margin="230,170,0,250"  Background="Transparent" BorderBrush="Yellow" BorderThickness=" 0 0 0 3" Width="50"/>
+            <TextBox x:Name="C" Text="{Binding C}"  HorizontalAlignment="Left" Foreground="White" FontFamily="Global Monospace" Margin="158,170,0,250"  Background="Transparent" BorderBrush="Yellow" BorderThickness=" 0 0 0 3" Width="50"/>
+            <TextBox x:Name="A" Text="{Binding D}" HorizontalAlignment="Left" Foreground="White" FontFamily="Global Monospace" Margin="21,170,0,250"  Background="Transparent" BorderBrush="Yellow" BorderThickness=" 0 0 0 3" Width="51" RenderTransformOrigin="0.519,2.823"/>
+            <TextBox x:Name="E" Text="{Binding E}" BorderBrush="Yellow" BorderThickness=" 0 0 0 3"   HorizontalAlignment="Left" Foreground="White" FontFamily="Global Monospace" Margin="32,272,0,148"  Background="Transparent" Width="50" RenderTransformOrigin="0.519,2.823"/>
+            <Button 
+                        x:Name="backbt"                          
+                        BorderThickness="0"
+                        Content="Pay"
+                        Foreground="White"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"
+                        Command="{Binding paymentCommand}"
+                Style="{StaticResource mainbtn}"
+                        Margin="83,324,104,66" Click="backbt_Click"        >
+
+            </Button>
+            <TextBlock Text="CVC" Foreground="White" Margin="31,241,180,176"/>
+
+        </Grid>
+    </Border>
+</Window>

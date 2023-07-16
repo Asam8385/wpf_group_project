@@ -1,0 +1,95 @@
+﻿<Page x:Class="gui_group_project.View.AdminUserC"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:gui_group_project.View" xmlns:gui_group_project="clr-namespace:gui_group_project"
+      mc:Ignorable="d" 
+      MouseDown="Border_MouseDown"
+     Height="580" Width="950"
+      Title="AdminUserCURD">
+
+    <Page.DataContext>
+        <gui_group_project:ViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Border CornerRadius="10"  Background="White" Margin="0,2,741,2"/>
+        <Border CornerRadius="10" Background="#576CBC" Margin="210,4,7,2"/>
+        <TextBlock Text="Username"
+                               Foreground="Black"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"                             
+                               Margin="138,193,754,359"/>
+        <TextBox   x:Name="txtUser"
+                            Text="{Binding Username}"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="Black"
+                             CaretBrush="LightGray"
+                             BorderBrush="White"
+                             BorderThickness="0,0,0,2"
+                             VerticalContentAlignment="Center"
+                             Margin="220,183,433,374"
+                             Padding="20,0,0,0">
+
+            <TextBox.Background>
+                <ImageBrush  ImageSource="/Images/user-icon.png"
+                                        Stretch="None"
+                                        AlignmentX="Left"/>
+
+            </TextBox.Background>
+        </TextBox>
+        <TextBlock  Text="Password"
+            Foreground="Black"
+            FontSize="12"
+            FontWeight="Medium"
+            FontFamily="Montserrat"                             
+            Margin="136,235,748,317"/>
+        <TextBox Text="{Binding Password}" x:Name="pass"
+            FontSize="13"
+            FontWeight="Medium"
+            FontFamily="Montserrat"                            
+            Foreground="Black"
+            CaretBrush="LightGray"
+            BorderBrush="White"
+            BorderThickness="0,0,0,2"
+            VerticalContentAlignment="Center"
+            Margin="216,223,434,331"
+            Padding="20,0,0,0">
+
+            <TextBox.Background>
+                <ImageBrush ImageSource="/Images/key-icon.png"
+                    Stretch="None"
+                    AlignmentX="Left"/>
+
+            </TextBox.Background>
+        </TextBox>
+
+
+        <Button Style="{StaticResource mainbtn}" Command="{Binding AcreateCommand}"  Margin="215,0,0,179" 
+                            x:Name="btnLogin"                          
+                            BorderThickness="0"
+                            Content="Create User"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand" Click="btnLogin_Click" HorizontalAlignment="Left" Width="205" Height="56" VerticalAlignment="Bottom"
+                            />
+
+        <TextBlock Text="Gender"
+            Foreground="Black"
+            Background="Transparent"
+            FontSize="12"
+            FontWeight="Medium"
+            FontFamily="Montserrat"                             
+            Margin="137,290,738,271"/>
+        <CheckBox IsChecked="{Binding MaleChecker}"  Content="MALE" Margin="260,291,632,274"/>
+        <CheckBox IsChecked="{Binding FemaleChecker}"  Content="FEMALE" Margin="331,291,534,273"/>
+
+
+
+    </Grid>
+
+
+</Page>

@@ -1,0 +1,98 @@
+﻿<Page x:Class="gui_group_project.View.AdminUserU"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:gui_group_project.View" xmlns:gui_group_project="clr-namespace:gui_group_project"
+      mc:Ignorable="d" 
+     Height="580" Width="920"
+      Title="AdminUserCURD">
+
+    <Page.DataContext>
+        <gui_group_project:ViewModel/>
+    </Page.DataContext>
+    <Border CornerRadius="10" Background="Transparent" >
+        <Grid>
+            <DataGrid x:Name="StudentsDataGridView"
+                         
+                          ItemsSource="{Binding Normalobseruser}"
+                          ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle}"
+                          RowStyle="{DynamicResource DataGridRowStyle}"  
+                          CellStyle="{DynamicResource DataGridCellStyle}" 
+                          Style="{DynamicResource DataGridStyle}"
+                          SelectedItem="{Binding ItemList}" Margin="364,10,15,0" >
+
+                <DataGrid.Columns>
+
+
+                    <DataGridTemplateColumn Header="Profile"
+                                                Width="70">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image  Source="{Binding ImageUrl}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTextColumn Header="Name"
+                                            Binding="{Binding Name}" 
+                                            IsReadOnly="True" Width="*"/>
+
+
+
+                    <DataGridTextColumn Header="Password" 
+                                            Binding="{Binding Password}"
+                                            Width="*"
+                                            IsReadOnly="True" />
+
+
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button  Content="Update" Style="{StaticResource mainbtn}" Margin="78,271,664,211" Command="{Binding AupdateCommand}" Click="Button_Click_1" ></Button>
+
+            <TextBlock Text="User Name"
+                Foreground="white"
+                FontSize="21"
+                FontWeight="Medium"
+                FontFamily="Montserrat"                             
+                Margin="23,35,747,510"/>
+            <TextBlock Text="Password"
+                Foreground="white"
+                FontSize="21"
+                FontWeight="Medium"
+                FontFamily="Montserrat"                             
+                Margin="30,137,789,411"/>
+            <TextBox Text="{Binding Username}" x:Name="pass1"
+                FontSize="13"
+                FontWeight="Medium"
+                FontFamily="Montserrat"                            
+                Foreground="Black"
+                CaretBrush="Yellow"
+                BorderBrush="White"
+                BorderThickness="0,0,0,2"
+                Height="28"
+                VerticalContentAlignment="Center"
+                Margin="29,70,648,482"
+                Background="Transparent"
+                Padding="20,0,0,0"/>
+            <TextBox Text="{Binding Password}" x:Name="pass1_Copy"
+                FontSize="13"
+                FontWeight="Medium"
+                FontFamily="Montserrat"                            
+                Foreground="Black"
+                CaretBrush="Yellow"
+                BorderBrush="White"
+                BorderThickness="0,0,0,2"
+                Height="28"
+                VerticalContentAlignment="Center"
+                Margin="35,184,664,368"
+                Background="Transparent"
+                Padding="20,0,0,0"/>
+
+            <Border CornerRadius="10" Panel.ZIndex="-1" Background="Blue" Margin="0,0,564,0"></Border>
+        </Grid>
+        
+    </Border>
+</Page>

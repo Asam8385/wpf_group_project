@@ -1,0 +1,69 @@
+﻿<Page x:Class="gui_group_project.View.User_pages.UserD"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:gui_group_project.View.User_pages"
+      xmlns:gui="clr-namespace:gui_group_project"
+      mc:Ignorable="d" 
+      Height="580" Width="950"
+      Title="UserD">
+    <Page.DataContext>
+        <gui:ViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <Border CornerRadius="10" BorderBrush="Transparent" BorderThickness="4">
+            <DataGrid x:Name="StudentsDataGridView"
+                         
+                          ItemsSource="{Binding Singleproducts}"
+                          ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle}"
+                          RowStyle="{DynamicResource DataGridRowStyle}"  
+                          CellStyle="{DynamicResource DataGridCellStyle}" 
+                          Style="{DynamicResource DataGridStyle}"
+                          SelectedItem="{Binding Selectedproduct}" Margin="0,10,0,72" >
+
+                <DataGrid.Columns>
+
+
+                    <DataGridTemplateColumn Header="Profile"
+                                                Width="70">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image  Source="{Binding ImageUrl}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTextColumn Header="Name"
+                                            Binding="{Binding Name}" 
+                                            IsReadOnly="True" Width="*"/>
+
+
+
+                    <DataGridTextColumn Header="Price" 
+                                            Binding="{Binding Price}"
+                                            Width="*"
+                                            IsReadOnly="True" />
+
+
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <Button  Command="{Binding deleteCommand}"  Margin="386,516,386,8" 
+            x:Name="btnLogin"                          
+            BorderThickness="0"
+            Content="Delete User"
+            FontSize="12"
+            FontFamily="Montserrat"
+            Cursor="Hand"
+                 Style="{StaticResource mainbtn}"
+                           />
+
+
+
+
+    </Grid>
+</Page>
